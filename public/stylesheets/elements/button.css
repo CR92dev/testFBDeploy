@@ -1,0 +1,81 @@
+/*--------------------------------------------------------------*/
+/* Global Buttons------------------------------------*/
+/*--------------------------------------------------------------*/
+
+button {
+    margin: 1%; 
+    padding: 14px; 
+    background-color: var(--transparent); 
+    border: none; 
+    border-radius: var(--border-radius);
+    
+    min-width: 120px; 
+    font-size: calc(var(--font-size)*1.2vw); 
+    text-align: center;
+
+    justify-content: center;
+    align-items: center;
+    transition: var(--speed);
+    border: 0; 
+    outline: 0;
+}
+.button { 
+    margin: 1%; 
+    padding: 14px; 
+
+    background-color: var(--transparent); 
+    border: none; 
+    cursor: var(--cursor); 
+    border-radius: 4px;
+    
+    min-width: 120px; 
+    font-size: calc(var(--font-size)*1.2vw); 
+    text-align: center;
+
+    justify-content: center;
+    align-items: center;
+    transition: var(--speed);
+    outline: 0;
+}
+
+/* Button style types------------------------------------*/
+/*--------------------------------------------------------------*/
+
+.dark {color: var(--txt-light);background-color: var(--bg); border: var(--border);}
+.light {color: var(--txt-dark); background-color: var(--txt-light); }
+.round {border-radius: 25px;}
+.button {margin: 1%; background-color: var(--bg-accent); border: none; color: var(--txt-light);}
+.buttoncolored {background-color: var(--primary); color: var(--txt-light);}
+.buttontransparent {border: 2px solid var(--primary); color: var(--primary);}
+.buttontext { color: var(--primary); text-transform: uppercase; font-weight: 600;}
+
+/* Buttons hover------------------------------------*/
+/*--------------------------------------------------------------*/
+.dark:hover {color: var(--txt-light);background-color: var(--bg-light);}
+.light:hover {color: var(--txt-dark); background-color: var(--halfwhite); }
+button:hover {cursor: var(--cursor-hover);}
+.buttoncolored:hover {background-color: var(--primarydark);}
+.buttontransparent:hover {background-color: var(--primary); color: var(--txt-light);}
+.buttontext:hover { color: var(--primarydark); text-rendering: geometricPrecision;}
+
+/*--------------------------------------------------------------*/
+/* interaction animation------------------------------------*/
+/*--------------------------------------------------------------*/
+
+.denied:hover {
+    animation: headShake;
+    animation-duration: 1.2s ;
+    animation-delay: 0.7s ;
+    animation-iteration-count: 1;
+  }
+
+.hover:hover {
+    transform: scale(1.2);
+    transform: translateY(-2px);
+    transition: 200ms ease-in-out;
+    z-index: 9999;
+    
+    -webkit-box-shadow: 0px 10px 21px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 21px -8px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 21px -8px rgba(0,0,0,0.75);
+}

@@ -1,0 +1,79 @@
+/*--------------------------------------------------------------*/
+/* [1] Global Root STYLES
+/*--------------------------------------------------------------*/
+
+* {margin: 0; padding: 0;}
+
+:root {
+    --halfwhite: rgba(255,255,255,0.3);
+    --transparent: rgb(255,255,255,0.0);
+    --primary: red;
+    --primarydark: darkred;
+    --txt-light: #ededed;
+    --txt-dark: #222;
+    --online-green: #1b9e1d;
+    
+    --bg: #242526;
+    --bg-light: #555;
+    --bg-accent: #484a4d;
+    --nav-size: 70px; 
+    --border: 2px solid #474a4d ;  
+    --border-radius: 6px;
+    --border-spacing: 4px;
+    --speed: 200ms;
+    --font-size: 14px;
+    --letter-spacing: -0.0415625em;
+    --cursor: url('/images/svg/sidewide/circle.svg'), auto;
+    --cursor-hover:url('/images/svg/sidewide/circle30-5.svg'), auto;
+}
+
+/*--------------------------------------------------------------*/
+/* [1] Global Root STYLES
+/*--------------------------------------------------------------*/
+html { 
+    background-color: var(--bg-accent); 
+    font-family: sans-serif;
+    
+}
+
+body { 
+    margin: 0;  
+    padding: 0; 
+    cursor: var(--cursor);
+}
+
+a {text-decoration: none; color: var(--txt-light); outline: 0;} 
+a:hover {cursor:var(--cursor-hover);}
+p {    
+    font-weight: 300;
+    /* font-size: 1.375rem; */
+    font-size: 1.375rem;
+    line-height: 1.7rem;
+}
+
+/* Keine focus designs von browsern */
+button:focus, a:-moz-focus-inner, a:focus {  
+    border: 1px solid white;
+    outline: 1px solid white;
+    filter: contrast(110%); 
+  }
+
+
+
+@media screen and ( max-width: 800px) {
+  .desktop { display: none;}
+  h3,h4,h5,h6 { font-size: 1.7rem; font-weight: 200;}
+}
+@media screen and ( min-width: 800px) {
+  .handy { display: none;}
+}
+ 
+
+/* width */::-webkit-scrollbar { width: 6px; border-radius: 8px; height: 0px;}
+/* Track */::-webkit-scrollbar-track {  background: var(--bg-accent); }
+/* Handle */::-webkit-scrollbar-thumb {  background: var(--primary);}
+/* Handle on hover */::-webkit-scrollbar-thumb:hover { background: var(--primarydark);}
+
+
+
+
